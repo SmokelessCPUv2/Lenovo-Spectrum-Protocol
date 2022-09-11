@@ -20,10 +20,11 @@ uint8_t* Spectrum::AddEffect(uint8_t profile, const std::vector<uint16_t>& Key, 
 		ColorChange Color;
 		Color.header.Operation = EffectChange;
 		Color.Profile = profile;
+		Color.header.PacketSize = offsetof(ColorChange, Effect1);
 		memcpy(data, &Color, sizeof(Color));
+
 	}
 	Header* header = (Header*)data;
-	header->PacketSize = offsetof(ColorChange, Effect1);
 
 	Effect_Data EffectData;
 	EffectData.Effect_NO = EffectNo + 1;
