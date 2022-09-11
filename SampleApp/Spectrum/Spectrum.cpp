@@ -63,7 +63,7 @@ uint8_t* Spectrum::SetBacklight(uint8_t level)
 	BrightnessChange brightness;
 	brightness.header.Operation = Brightness;
 	brightness.Brightness = level;
-	brightness.header.PacketSize += sizeof(brightness.Brightness);
+	brightness.header.PacketSize = 0xC0;
 	memcpy(data_backLight, &brightness, sizeof(brightness));
 	return data_backLight;
 }
@@ -73,7 +73,7 @@ uint8_t* Spectrum::SetProfile_1(uint8_t profile)
 	ProfileChange Profile;
 	Profile.Profile = profile;
 	Profile.header.Operation = Profile_Set_1;
-	Profile.header.PacketSize += sizeof(Profile.Profile);
+	Profile.header.PacketSize = 0xC0;
 	memcpy(data_Profile, &Profile, sizeof(ProfileChange));
 	return data_Profile;
 }

@@ -19,7 +19,7 @@ All packet Contain a 4 byte Header
     {
         uint8_t Head = 0x7; //This is always 0x7
         uint8_t Operation;  //This Set the Operation to Execute
-        uint8_t PacketSize; //The Payload Size; if more than 256, put Size%256 here
+        uint8_t PacketSize; //0xC0 when Profile/Brightness or AuraraSync, otherwise the Payload Size if more than 256, put Size%256 here
         uint8_t Tail = 0x;  //This is always 0x3
     }
 
