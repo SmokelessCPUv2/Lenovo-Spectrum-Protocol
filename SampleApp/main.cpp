@@ -83,7 +83,7 @@ int main(int argc, char** argv)
 
 
 	//verify that the handle has already been created
-	if (found)
+	if (!found)
 	{
 
 		Spectrum Spectrum;
@@ -96,9 +96,9 @@ int main(int argc, char** argv)
 		data = Spectrum.SetProfile_2(4);
 		HidD_SetFeature(DeviceHandle, data, 960);
 
-		Spectrum.AddEffect(4, { 1 }, { {255,255,255} }, Always, 0, 0, 0, ColorList, 0);
-		Spectrum.AddEffect(4, { 2 }, { {255,0,0},{0,0,255} }, Color_Wave, 0, 0, 0, ColorList, 0);
-		data = Spectrum.AddEffect(4, { 3 }, { {25,45,0},{0,45,0} }, Color_Pulse, 0, 0, 0, ColorList, 0);
+		Spectrum.AddEffect(4, { KeyMap.at("Esc") }, {{255,255,255}}, Always, 0, 0, 0, ColorList, 0);
+		Spectrum.AddEffect(4, { KeyMap.at("F1") }, { {255,0,0},{0,0,255} }, Color_Wave, 0, 0, 0, ColorList, 0);
+		data = Spectrum.AddEffect(4, { KeyMap.at("F2") }, { {25,45,0},{0,45,0} }, Color_Pulse, 0, 0, 0, ColorList, 0);
 
 		HidD_SetFeature(DeviceHandle, data, 960);
 
