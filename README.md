@@ -275,5 +275,7 @@ When Working with Legion_Aurora_Sync, you need to periodically send the "bitmap"
     WIP: Sample C++ Code/class, for the protocol Implementation
 
 # Credit
-    Huge thanks to GhostFella#4719 for his dump and his patience
-    Huge thanks to [Legion Series Discord](https://discord.gg/XVf3ZEFVJA)
+
+Huge thanks to GhostFella#4719 for his dump and his patience
+
+Huge thanks to [Legion Series Discord](https://discord.gg/XVf3ZEFVJA)
