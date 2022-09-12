@@ -83,7 +83,7 @@ int main(int argc, char** argv)
 
 
 	//verify that the handle has already been created
-	if (!found)
+	if (found)
 	{
 
 		Spectrum Spectrum;
