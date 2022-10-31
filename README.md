@@ -5,7 +5,7 @@ The new Legion RGB keyboard support both setting and getting effect..
 
 # Writing
 
-All communication is done sending a Hid Report over the USB Device (VID/PID: 0x048D/0x9C77), the report has a size of 960 byte.
+All communication is done sending a Hid Report over the USB Device (VID/PID: 0x048D/0xC977), the report has a size of 960 byte.
 
 
 The report size is always 960 byte, so if the control structure is less than that, fill the remaining space with Zero.
